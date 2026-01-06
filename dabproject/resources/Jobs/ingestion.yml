@@ -1,0 +1,14 @@
+resources:
+  jobs:
+    Ingestion_Job:
+      name: Ingestion Job
+      tasks:
+        - task_key: ingestion
+          notebook_task:
+            notebook_path: /Workspace/Users/panabaka100@gmail.com/assetbundles/dabproject/src/notebooks/ingestion
+            base_parameters:
+              catalog_name: assetbundle
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
